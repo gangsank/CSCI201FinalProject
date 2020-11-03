@@ -1,0 +1,52 @@
+body {
+	padding:0;
+	margin:0;
+	background-color: white;
+	list-style-type: none;
+}
+img {
+	width: 20px;
+	
+}
+ul {
+	list-style-type: none;
+	text-align: right;
+}
+.online {
+	border: 1px solid black;	
+}
+.online img {
+	float: left;	
+}
+.instructors {
+	text-align: left;
+}
+.disc ul {
+	float: left;	
+}
+.me {
+	float: right;
+}
+.chat {
+	align-self: flex-end;
+	/* bottom: 0; */
+	border: 1px solid black;	
+}
+.you {
+	text-align: left;
+	/* bottom: 0; */
+}
+.mechat {
+	text-align: right;
+
+}
+.react {
+	align-self: flex-end;
+	height: 300px;
+	border: 1px solid black;	
+	
+}
+.post{
+	height: 300px;
+	border: 1px solid black;
+}
