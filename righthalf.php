@@ -1,3 +1,9 @@
+<?php
+  require 'config/db.php';
+  $sql = "SELECT * FROM posts";
+  $result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +32,14 @@
         </div>
 
         <div class="col-6 section py-3 main">
-         <div class = "post"><h5>post:</h5></div> 
+         <div class = "post"><h5>post:</h5>
+          <?php
+            while($rows = $result->fetch_assoc()){
+            echo "<h5>" .$rows['Title']. "</h2>";
+            echo "<p>" .$rows['Content']. "</p>";
+            }
+          ?>
+         </div> 
           <div class = "react"> <h5>react:</h5> </div>
         </div>
         <div class="col-2 section py-3 chat">
