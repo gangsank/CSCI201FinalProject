@@ -1,3 +1,4 @@
+<?php require_once 'controllers/authenticate.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,14 @@
 			<h1 class="col-12 mt-4 mb-4">Piazza 2.0</h1>
 		</div> 
 	</div> 
+
+	<?php if(count($errors) > 0): ?>
+		<div class="alert alert-danger">
+			<?php foreach($errors as $error): ?>
+				<li><?php echo $error; ?></li>
+			<?php endforeach; ?>
+		</div>
+	<?php endif; ?>
 
 	<div class="container">
 
@@ -43,13 +52,13 @@
 			<div class="form-group row">
 				<div class="col-sm-3"></div>
 				<div class="col-sm-9 mt-3">
-					<button type="submit" class="btn btn-primary">Log In</button>
+					<button type="submit" name = "login_btn" class="btn btn-primary">Log In</button>
 				</div>
 			</div> <!--form-group -->
 
 			<div class="row">
 				<div class="col-sm-9 ml-sm-auto">
-					<a href="register_form.html">Create an account</a>
+					<a href="register_form.php">Create an account</a>
 				</div>
 			</div> <!--row -->
 

@@ -47,14 +47,14 @@
 				<div class="col-sm-9">
 					<div class="form-check form-check-inline">
 						<label class="form-check-label">
-							<input type="checkbox" name="status[]" id= "status-id" class="form-check-input" value="true">
+							<input type="checkbox" name="status[]" id= "status" class="form-check-input" value="true">
 							Student
 						</label>
 					</div> <!--form-check -->
 					<div class="form-check form-check-inline">
 						<label class="form-check-label ml-2">
 							<!--false means is an instructor-->
-							<input type="checkbox" name="status[]" id= "status-id" class="form-check-input" value="false">
+							<input type="checkbox" name="status[]" id= "status" class="form-check-input" value="false">
 							Instructor
 						</label>
 					</div> <!--form-check -->
@@ -65,7 +65,7 @@
 			<div class="form-group row">
 				<label for="course-id" class="col-sm-3 col-form-label text-sm-right">Course Enrolled: <span class="text-danger">*</span></label>
 				<div class="col-sm-9">
-					<select name="course" id="course-id" class="form-control">
+					<select name="course" id="course" class="form-control">
 						<option value="" disabled selected>-- Select One --</option>
 						<option value="csci201">CSCI 201</option>
 						<option value="csci270">CSCI 270</option>
