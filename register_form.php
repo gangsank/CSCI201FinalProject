@@ -86,7 +86,7 @@
 				<div class="col-sm-3"></div>
 				<div class="col-sm-9 mt-3">
 					<button type="submit" name = "signup_btn" class="btn btn-primary">Register</button>
-					<a href="login.html" role="button" class="btn btn-light">Cancel</a>
+					<a href="login.php" role="button" class="btn btn-light">Cancel</a>
 				</div>
 			</div> <!-- .form-group -->
 		</form>
