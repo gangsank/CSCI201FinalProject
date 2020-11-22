@@ -1,9 +1,3 @@
-<?php
-  require 'config/db.php';
-  $sql = "SELECT * FROM posts";
-  $result = $conn->query($sql);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,7 +45,7 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.php">Login / Logout</a>
+            <a class="nav-link" href="login.html">Login / Logout</a>
             <a class="nav-link" href="addposts.php">Add Post</a>
           </li>
         <li></li>
@@ -177,7 +171,6 @@
       </div>
       <!-- <div class="col-lg-2 section py-3 online">
         <h4>ONLINE</h4>
-
         <div class="instructors">
             <h5>Instructors:</h5>
             <ul>
@@ -186,7 +179,6 @@
                 <li><img src="smile.png" alt="prof pic"/>cp</li>
             </ul>
         </div>
-
         <div class="students">
             <h5>Students:</h5>
             <ul>
@@ -198,9 +190,9 @@
                 <li><img src="smile.png" alt="prof pic"/>student</li>
             </ul>
         </div>
-
     </div> -->
-
+    </div>
+    <div class="row"></div>
 
     <script></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
