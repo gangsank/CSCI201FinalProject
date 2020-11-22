@@ -52,9 +52,9 @@ $result = $conn->query($sql);
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">Login / Logout</a>
-            <a class="nav-link" href="addposts.php">Add Post</a>
+            
           </li>
-        <li></li>
+        <li><a class="nav-link" href="addposts.php">Add Post</a></li>
         </ul>
         <form class="form-inline my-2 my-lg-0 row">
           <input
