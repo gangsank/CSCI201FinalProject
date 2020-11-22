@@ -1,3 +1,9 @@
+<?php
+  require 'config/db.php';
+  $sql = "SELECT * FROM posts";
+  $result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -85,11 +91,11 @@
               distances of each restaurant
             </p>
             <?php
-            while($rows = $result->fetch_assoc()){
-            echo "<h5>" .$rows['Title']. "</h2>";
-            echo "<p>" .$rows['Content']. "</p>";
-            }
-          ?>
+              while($rows = $result->fetch_assoc()){
+              echo "<h5>" .$rows['Title']. "</h2>";
+              echo "<p>" .$rows['Content']. "</p>";
+              }
+            ?>
           </div>
           <hr />
           <div class="react">
