@@ -110,13 +110,11 @@ $result = $conn->query($sql);
           </div>
           <hr />
           <div class="react"> 
-            <button class="btn"><i class="far fa-thumbs-up"></i></button>
-            <button class="btn"><i class="fas fa-heart"></i></button>
-            <button class="btn"><i class="far fa-grin"></i></button>
-            <button class="btn"><i class="far fa-frown"></i></button>
-            <button class="btn">
-              <i class="far fa-grin-squint-tears"></i>
-            </button>
+          <div class = "rct" style = "display:inline;"> <button class="btn thumb" ><i class="far fa-thumbs-up"></i></button> </div>
+          <div class = "rct1" style = "display:inline;"> <button class="btn heart"><i class="fas fa-heart"></i></button> </div>
+          <div class = "rct2" style = "display:inline;"> <button class="btn grin"><i class="far fa-grin"></i></button> </div>
+          <div class = "rct3" style = "display:inline;"> <button class="btn frown"><i class="far fa-frown"></i></button> </div>
+          <div class = "rct4" style = "display:inline;"> <button class="btn tears"> <i class="far fa-grin-squint-tears"></i> </button> </div>
           </div>
           <div class="loadedcomments">
             <hr />
@@ -211,7 +209,33 @@ $result = $conn->query($sql);
     </div>
     <div class="row"></div>
 
-    <script></script>
+    <script>
+      document.querySelector(".rct").onclick = function(event) {
+      console.log("hello");
+      console.log(document.querySelector(".rct").getElementsByTagName("button")[0]);
+      document.querySelector(".rct").getElementsByTagName("button")[0].style.backgroundColor = "skyblue";
+    }
+    document.querySelector(".rct1").onclick = function(event) {
+      console.log("hello");
+      console.log(document.querySelector(".rct1").getElementsByTagName("button")[0]);
+      document.querySelector(".rct1").getElementsByTagName("button")[0].style.backgroundColor = "skyblue";
+    }
+    document.querySelector(".rct2").onclick = function(event) {
+      console.log("hello");
+      console.log(document.querySelector(".rct2").getElementsByTagName("button")[0]);
+      document.querySelector(".rct2").getElementsByTagName("button")[0].style.backgroundColor = "skyblue";
+    }
+    document.querySelector(".rct3").onclick = function(event) {
+      console.log("hello");
+      console.log(document.querySelector(".rct3").getElementsByTagName("button")[0]);
+      document.querySelector(".rct3").getElementsByTagName("button")[0].style.backgroundColor = "skyblue";
+    }
+    document.querySelector(".rct4").onclick = function(event) {
+      console.log("hello");
+      console.log(document.querySelector(".rct4").getElementsByTagName("button")[0]);
+      document.querySelector(".rct4").getElementsByTagName("button")[0].style.backgroundColor = "skyblue";
+    }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <script src="/js/main.js"></script>
