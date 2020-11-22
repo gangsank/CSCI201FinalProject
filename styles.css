@@ -2,51 +2,76 @@ body {
 	padding:0;
 	margin:0;
 	background-color: white;
-	list-style-type: none;
+	list-style-type: none; box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }
 img {
 	width: 20px;
-	
 }
 ul {
 	list-style-type: none;
 	text-align: right;
 }
-.online {
-	border: 1px solid black;	
+.thistle {
+	
+	background-color: thistle;
 }
-.online img {
-	float: left;	
+.seagreen{
+	
+	background-color: seagreen;
 }
-.instructors {
+
+.online{
+	background-color: thistle;
+	border: 3px solid white;
+}
+
+.instructors, .you {
 	text-align: left;
 }
-.disc ul {
+.disc ul, .online img{
 	float: left;	
 }
 .me {
 	float: right;
 }
 .chat {
+	background-color: thistle;
 	align-self: flex-end;
-	/* bottom: 0; */
-	border: 1px solid black;	
+	width: 200px;
+	height: 300px;
+	max-width: 200px;
 }
-.you {
-	text-align: left;
-	/* bottom: 0; */
-}
+
 .mechat {
 	text-align: right;
-
 }
 .react {
 	align-self: flex-end;
-	height: 300px;
-	border: 1px solid black;	
-	
+	height: 30px;
 }
 .post{
 	height: 300px;
-	border: 1px solid black;
+
+}
+.sidebar {
+	border: 3px solid white;
+	background-color: thistle;
+}
+.comment{
+	height: 200px;
+}
+
+.message{
+
+}
+.username-page-container, #usernameForm, .username-page-container{
+	width: 150px;
+}
+.chatheader {
+	text-align: center;
+  justify-content: center;
+}
+li {
+	max-height: 50px;
 }
