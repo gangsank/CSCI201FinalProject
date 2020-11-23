@@ -4,6 +4,7 @@ session_start();
 
 $sql = "SELECT * FROM posts";
 $result = $conn->query($sql);
+$errors = array();
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +115,44 @@ $result = $conn->query($sql);
             <hr />
             <h5>Comment:</h5>
             <textarea name="commenttext" class="form-control"></textarea>
-            <input class="btn btn-primary seagreen" type="submit" value="Submit" />
+            <input class="btn btn-primary seagreen" type="submit" name = "comment_btn" value="Submit" />
+            <?php
+      
+              if(isset($_POST['comment_btn'])) { 
+                  //setting variable names as assigned in the above
+              $PostID = $id;
+              $Comment = $_POST['commenttext'];
+              if(empty($PostID)){
+                $errors['PostID'] = "PostID required";
+              }
+              if(empty($Comment)){
+                $errors['Comment'] = "Comment required";
+              }
+              if(count($errors) === 0){
+
+                $sql = "INSERT INTO `posts`(`PostID`, `Comment`) VALUES (?, ?)";
+                $stmtt = $conn->prepare($sql);
+                $stmtt->bind_param('i`s', $PostID, $Comment);
+                if($stmtt->execute()){
+                  header('Location: main.php');
+                }
+                else{
+                  $errors['db_error'] = "Database error: Failed to add information";
+                }
+
+              }
+            }
+              else{
+              ?>  
+                <div class="alert alert-danger">
+                  <?php foreach($errors as $error): ?>
+                    <li><?php echo $error; ?></li>
+                  <?php endforeach; ?>
+                </div>
+              <?php
+              }
+              ?>
+
           </div>
         <?php endif; ?>
         </div>

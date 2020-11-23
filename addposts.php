@@ -79,7 +79,7 @@ if(isset($_POST['post_btn'])){
 		$stmtt = $conn->prepare($sql);
 		$stmtt->bind_param('ss', $Title, $Content);
 		if($stmtt->execute()){
-			header('Location: index.php');
+			header('Location: main.php');
 		}
 		else{
 			$errors['db_error'] = "Database error: Failed to add information";
@@ -96,6 +96,40 @@ if(isset($_POST['post_btn'])){
 	<?php
 	}
 }
+
+      if(isset($_POST['comment_btn'])) { 
+          //setting variable names as assigned in the above
+      $PostID = 1;
+      $Comment = $_POST['content'];
+      if(empty($PostID)){
+        $errors['PostID'] = "PostID required";
+      }
+      if(empty($Comment)){
+        $errors['Comment'] = "Comment required";
+      }
+      if(count($errors) === 0){
+
+        $sql = "INSERT INTO `posts`(`PostID`, `Comment`) VALUES (1, ?)";
+        $stmtt = $conn->prepare($sql);
+        $stmtt->bind_param('is', $PostID, $Comment);
+        if($stmtt->execute()){
+          header('Location: main.php');
+        }
+        else{
+          $errors['db_error'] = "Database error: Failed to add information";
+        }
+
+      }
+    }
+      else{
+      	?>
+        <div class="alert alert-danger">
+          <?php foreach($errors as $error): ?>
+            <li><?php echo $error; ?></li>
+          <?php endforeach; ?>
+        </div>
+      <?php
+      }
 
 ?>
 
