@@ -1,6 +1,6 @@
 <?php
 
-define('DB_HOST', 'sql213.byetcluster.com');
-define('DB_USER', 'epiz_27281239');
-define('DB_PASS', 'Y8z1UADwBdqKVb');
-define('DB_NAME', 'epiz_27281239_CSCI201Project');
+define('DB_HOST', 'sql12.freesqldatabase.com');
+define('DB_USER', 'sql12376692');
+define('DB_PASS', 'WNZtQAjnGY');
+define('DB_NAME', 'sql12376692');
