@@ -16,13 +16,13 @@
 		</div> <!-- .row -->
 	</div> <!-- .container -->
 
-<?php if(count($errors) > 0): ?>
-		<div class="alert alert-danger">
-			<?php foreach($errors as $error): ?>
-				<li><?php echo $error; ?></li>
-			<?php endforeach; ?>
-		</div>
-<?php endif; ?>
+	<?php if(count($errors) > 0): ?>
+			<div class="alert alert-danger">
+				<?php foreach($errors as $error): ?>
+					<li><?php echo $error; ?></li>
+				<?php endforeach; ?>
+			</div>
+	<?php endif; ?>
 
 	<div class="container">
 
