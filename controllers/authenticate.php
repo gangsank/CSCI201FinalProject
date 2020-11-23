@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require 'config/db.php';
 
@@ -72,53 +71,3 @@ if(isset($_POST['signup_btn'])){
 }
 
 }
-
-// if user clicks login button
-
-if(isset($_POST['login_btn'])){
-
-	//setting variable names as assigned in the login.php
-	$Username = $_POST['username'];
-	$Password = $_POST['password'];
-
-	//Client Authentication
-	if(empty($Username)){
-		$errors['Username'] = "Username required";
-	}
-	if(!filter_var($Username, FILTER_VALIDATE_EMAIL)){
-		$errors['Username'] = "Invalid username";
-	}
-	if(empty($Password)){
-		$errors['Password'] = "Password required";
-	}
-	
-	if(count($errors)===0){
-		$usernameQuery = "SELECT * FROM users WHERE Username =? LIMIT 1";
-		$stmt = $conn->prepare($usernameQuery);
-		$stmt->bind_param('s', $Username);
-		$stmt->execute();
-		$result = $stmt->get_result();
-		$user = $result->fetch_assoc();
-		
-		if(password_verify($Password, $user['Password'])) {
-			//login user
-			$_SESSION['Username'] = $user['Username'];
-			$_SESSION['Status'] = $user['Status'];
-			$_SESSION['CourseEnrolled'] = $user['Course'];
-			$_SESSION['message'] = "You are now logged in";
-			header('Location: righthalf.html');
-			exit();
-
-		} 
-		else {
-			$errors['login_error'] = "Could not login successfully";
-		}
-	}
-}
-
-
-
-
-
-
-
