@@ -31,7 +31,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="all.css" />
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light thistle">
         <a class="navbar-brand" href="index.html">Piazza 2.0</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -66,22 +66,10 @@ $result = $conn->query($sql);
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-2 sidebar" style = "margin:0; border-width: 0px; ">
-            load posts here &emsp;&emsp; <button><i class="far fa-star"></i></button>
-        </div>
-
+      
         <div class="col-lg-6 section py-3 main">
           <div class="loadedpost">
-            <h5>POST'S TITLE</h5>
-            <hr />
-            <p>
-              Client If valid connection made, let user know how many more
-              drivers needed before orders are delivered total number of
-              connected drivers should include the current driver Once orders
-              are dispatched, client needs to deliver orders to appropriate
-              restaurants Also handle returned data from api calls to determine
-              distances of each restaurant
-            </p>
+            
             <?php
               while($rows = $result->fetch_assoc()){
               echo "<h5>" . $rows['Title']. "</h2>";
